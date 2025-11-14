@@ -7,7 +7,6 @@ export default function Services() {
       className="min-h-screen bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${sageBackground})` }}
     >
-      {/* Content Wrapper */}
       <div className="flex justify-center w-full">
         <div className="w-full max-w-6xl px-4">
 
@@ -21,7 +20,7 @@ export default function Services() {
                 Compassionate, evidence-based therapy for individuals, couples, and families.
               </p>
               <a
-                href="#booking"
+                href="/contact"
                 className="px-6 py-3 bg-[#808c78] hover:bg-[#6f7a65] text-white font-semibold rounded-xl shadow"
               >
                 Book an Appointment
@@ -40,7 +39,6 @@ export default function Services() {
 
           {/* Services Cards */}
           <section className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            {/* Individual Service Card */}
             <div className="bg-white/90 rounded-2xl shadow-lg p-6">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#808c78]">Individual Therapy</h3>
               <p className="text-gray-700 text-lg">
@@ -78,7 +76,7 @@ export default function Services() {
                 Choose a service and schedule your first session. We’re here to support you every step of the way.
               </p>
               <a
-                href="#"
+                href="/contact"
                 className="px-8 py-4 bg-[#808c78] hover:bg-[#6f7a65] text-white rounded-xl text-lg font-semibold shadow"
               >
                 Book Now

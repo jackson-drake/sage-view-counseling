@@ -41,13 +41,11 @@ export default function Home() {
           {/* Therapist Card - single column always */}
           <section id="therapists" className="flex justify-center mb-12">
             <div className="bg-white/90 rounded-2xl shadow-lg p-6 max-w-3xl flex flex-col items-center">
-              {/* Image */}
               <img
                 src={bekaImage}
                 alt="Beka Harrop"
                 className="w-full h-auto max-h-[36rem] object-contain shadow-lg rounded-2xl mb-6"
               />
-              {/* Text */}
               <div className="text-center">
                 <h3 className="text-3xl md:text-4xl font-bold mb-4 text-[#808c78]">
                   Beka Harrop, Licensed Clinical Social Worker
@@ -72,7 +70,7 @@ export default function Home() {
                 Choose a therapist and schedule your first session. We’re here to support you every step of the way.
               </p>
               <a
-                href="#"
+                href="/contact"
                 className="px-8 py-4 bg-[#808c78] hover:bg-[#6f7a65] text-white rounded-xl text-lg font-semibold shadow"
               >
                 Book Now
