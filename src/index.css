@@ -1,13 +1,136 @@
-body {
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+html, body, h1, h2, h3, h4, h5, h6, p, a, button, li {
+  font-family: 'Merriweather', serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* -----------------------------
+   Hero Banner
+----------------------------- */
+header {
+  @apply flex items-center justify-center text-center w-full h-96 px-4;
+}
+
+header a {
+  @apply px-6 py-3 rounded-xl text-white font-semibold shadow;
+  background-color: #808c78;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  background-color: #6f7a65;
+}
+
+/* -----------------------------
+   Sections Titles
+----------------------------- */
+h2 {
+  font-family: 'Merriweather', serif;
+  color: #808c78;
+}
+
+/* -----------------------------
+   Buttons
+----------------------------- */
+a, button {
+  transition: all 0.3s ease;
+}
+
+a.bg-primary {
+  background-color: #808c78;
+  color: #ffffff;
+}
+
+a.bg-primary:hover {
+  background-color: #6f7a65;
+}
+
+/* -----------------------------
+   Booking Section
+----------------------------- */
+section#booking {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+section#booking a {
+  @apply px-8 py-4 rounded-xl text-lg font-semibold shadow text-white;
+  background-color: #808c78;
+}
+
+section#booking a:hover {
+  background-color: #6f7a65;
+}
+
+/* -----------------------------
+   Therapist Card
+----------------------------- */
+.home-therapist-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.home-therapist-card img {
+  width: 100%;
+  max-height: 36rem;
+  object-fit: contain;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive Layout for Therapist Cards */
+@media (min-width: 768px) {
+  .home-therapist-card {
+    flex-direction: row;
+  }
+}
+
+/* -----------------------------
+   Navbar
+----------------------------- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #ffffff/80; /* slightly transparent so page bg shows */
+  backdrop-filter: blur(6px);
+}
+
+.mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+nav a {
+  font-family: 'Merriweather', serif;
+}
+
+/* -----------------------------
+   Footer
+----------------------------- */
+footer {
+  background-color: #808c78;
+  text-align: center;
+  padding: 1rem 0;
+  color: #ffffff;
+  font-family: 'Merriweather', serif;
+}
+
+/* -----------------------------
+   Links hover colors
+----------------------------- */
+a:hover {
+  color: #ffc0cb; /* baby pink accent */
 }
