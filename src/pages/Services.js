@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import sageBackground from '../assets/sage.jpg';
 
 export default function Services() {
   return (
     <div
-      className="min-h-screen bg-fixed bg-cover bg-center"
+      className="min-h-screen bg-fixed bg-cover bg-center py-12"
       style={{ backgroundImage: `url(${sageBackground})` }}
     >
       <div className="flex justify-center w-full">
         <div className="w-full max-w-6xl px-4">
 
           {/* Hero Banner */}
-          <header className="w-full h-64 md:h-96 flex items-center justify-center text-center mt-8 md:mt-12">
+          <header className="w-full h-64 md:h-96 flex items-center justify-center text-center mb-12">
             <div className="bg-pink-100/80 p-8 rounded-2xl max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#808c78]">
                 Our Therapy Services
@@ -19,12 +20,12 @@ export default function Services() {
               <p className="text-lg md:text-xl mb-6 text-gray-800">
                 Compassionate, evidence-based therapy for individuals, couples, and families.
               </p>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="px-6 py-3 bg-[#808c78] hover:bg-[#6f7a65] text-white font-semibold rounded-xl shadow"
               >
                 Book an Appointment
-              </a>
+              </Link>
             </div>
           </header>
 
@@ -75,12 +76,12 @@ export default function Services() {
               <p className="text-gray-800 mb-8 text-lg">
                 Choose a service and schedule your first session. We’re here to support you every step of the way.
               </p>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-[#808c78] hover:bg-[#6f7a65] text-white rounded-xl text-lg font-semibold shadow"
               >
                 Book Now
-              </a>
+              </Link>
             </div>
           </section>
 

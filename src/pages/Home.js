@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import bekaImage from '../assets/beka.JPEG';
 import sageBackground from '../assets/sage.jpg';
 
@@ -20,12 +21,12 @@ export default function Home() {
               <p className="text-lg md:text-xl mb-6 text-gray-800">
                 Compassionate therapy for individuals, couples & families.
               </p>
-              <a
-                href="#booking"
+              <Link
+                to="/contact"
                 className="px-6 py-3 bg-[#808c78] hover:bg-[#6f7a65] text-white font-semibold rounded-xl shadow"
               >
                 Book an Appointment
-              </a>
+              </Link>
             </div>
           </header>
 
@@ -41,11 +42,13 @@ export default function Home() {
           {/* Therapist Card - single column always */}
           <section id="therapists" className="flex justify-center mb-12">
             <div className="bg-white/90 rounded-2xl shadow-lg p-6 max-w-3xl flex flex-col items-center">
+              {/* Image */}
               <img
                 src={bekaImage}
                 alt="Beka Harrop"
                 className="w-full h-auto max-h-[36rem] object-contain shadow-lg rounded-2xl mb-6"
               />
+              {/* Text */}
               <div className="text-center">
                 <h3 className="text-3xl md:text-4xl font-bold mb-4 text-[#808c78]">
                   Beka Harrop, Licensed Clinical Social Worker
@@ -55,9 +58,12 @@ export default function Home() {
                   <br /><br />
                   In my free time, you can find me cooking, baking, hosting girls’ nights, or spending time with my family.
                 </p>
-                <a href="#booking" className="text-[#808c78] font-semibold hover:underline text-lg md:text-xl">
+                <Link
+                  to="/contact"
+                  className="text-[#808c78] font-semibold hover:underline text-lg md:text-xl"
+                >
                   Book with Beka →
-                </a>
+                </Link>
               </div>
             </div>
           </section>
@@ -69,12 +75,12 @@ export default function Home() {
               <p className="text-gray-800 mb-8 text-lg">
                 Choose a therapist and schedule your first session. We’re here to support you every step of the way.
               </p>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-[#808c78] hover:bg-[#6f7a65] text-white rounded-xl text-lg font-semibold shadow"
               >
                 Book Now
-              </a>
+              </Link>
             </div>
           </section>
 
